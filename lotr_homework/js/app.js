@@ -93,24 +93,12 @@ const makeHobbits = () => {
 
   // 1. display an unordered list of the hobbits in the shire.
 
-// const $hobbits = $('.hobbits'); 
-// const $ul = $('<ul/>'); 
-// for (let i = 0; i < hobbits.length; i++){
-//   const $li = $('<li/>');
-//   $li.attr('id', 'hobbits', 'hobbits[i]');
-//   $li.text('hobbits[i]');
-//   // $li.attr('class', 'hobbits');
-//   // $ul.append($hobbits[i]); 
-// }
-//   console.log($ul);
-//   $('#The-Shire').append($ul);
-
 for(let i = 0; i < hobbits.length; i++){
  console.log(hobbits[i])
  const $ul = $("<ul/>");
  const $li = $('<li/>');
  $li.text(hobbits[i]);
- $li.addClass("hobbits");
+ $li.addClass("hobbit");
  $ul.append($li);
  $("#The-Shire").append($ul);
 
@@ -135,12 +123,27 @@ for(let i = 0; i < hobbits.length; i++){
 const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
+  const $div = $('<div/>');
+  $div.attr('id', 'the-ring');
+  console.log($div);
 
   // 2. add the ring as a child of Frodo
+
+  $( "li" ).each(function( index ) {
+  console.log( index + ": " + $( this ).text() );
+});
 
   // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
 
   // when you think you have given Frodo the ring, check in your Elements tab
+
+  $('.hobbit')[0].append(' the-ring')
+
+
+
+  console.log($('.hobbit'));
+
+
 
 };
 
@@ -153,6 +156,17 @@ const keepItSecretKeepItSafe = () => {
 const makeBaddies = () => {
 
   // 1. display an unordered list of baddies in Mordor
+
+  for ( let b = 0; b < baddies.length; b++) {
+    console.log(baddies[b]);
+    const $ul = $('<ul/>');
+    const $li = $('<li/>');
+    $li.text(baddies[b]); 
+    $li.addClass('baddy');
+    $ul.append($li);
+    $('#Mordor').append($ul);
+
+  }
 
   // 2. give each of the baddies a class of "baddy"
 
