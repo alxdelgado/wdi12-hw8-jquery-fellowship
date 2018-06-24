@@ -137,7 +137,7 @@ const keepItSecretKeepItSafe = () => {
 
   // when you think you have given Frodo the ring, check in your Elements tab
 
-  $('.hobbit')[0].append(' the-ring')
+  $('.hobbit').append($div)
 
 
 
@@ -251,11 +251,30 @@ const forgeTheFellowShip = () => {
 
   // 1. create a new div with an id 'the-fellowship'
 
+  const $div = $('<div/>'); 
+  $div.attr('id', 'the-fellowship'); 
+  console.log($div); 
+  const $h1 = $('<h1/>');
+  $h1.text('The Fellowship'); 
+  $div.append($h1);
+  console.log($div)
+  $('#middle-earth').append($div);
+
   // 2. add an h1 with the text 'The Fellowship' to this new div
 
   // 3. append the fellowship to middle-earth
 
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
+
+  $('.hobbit');
+  $('.buddy');
+  const $hobbit = $('.hobbit');
+  const $buddy = $('.buddy');
+  $div.append($buddy); 
+  $div.append($hobbit); 
+
+
+
 
 };
 
