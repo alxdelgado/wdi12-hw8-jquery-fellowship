@@ -274,8 +274,6 @@ const forgeTheFellowShip = () => {
   $div.append($hobbit); 
 
 
-
-
 };
 
 // COMMIT YOUR WORK
@@ -287,6 +285,8 @@ const forgeTheFellowShip = () => {
 const theBalrog = () => {
 
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
+  $(`.buddy:contains('Gandalf')`).text('Gandalf the White');
+ 
 
   // 2. add a class "the-white" to this element
 
